@@ -1,13 +1,18 @@
 package com.qa;
 
-/**
- * Hello world!
- *
- */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class App 
 {
+    public static final Logger logger = LoggerFactory.getLogger(App.class);
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        logger.info("Starting application");
+        SpringApplication.run(App.class, args);
     }
 }
